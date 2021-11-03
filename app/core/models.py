@@ -30,7 +30,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default = False)
 
-    objects = UserManager()
+    objects = UserManager()  # class attribute ทุกๆ instance จะมีเหมือนกันหมด เพิ่งเคยเห็นการ inherite เเบบนี้ ว้าวๆๆ
 
     USERNAME_FIELD = 'email'
 
